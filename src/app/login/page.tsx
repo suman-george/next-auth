@@ -9,7 +9,8 @@ export default function Login() {
           Welcome Back
         </h1>
         <p className="text-gray-300 text-center">
-          Sign in with your GitHub account to continue
+          Sign in with your GitHub or UAE Pass <br></br>
+          account to continue
         </p>
         <button
           className="w-full bg-white text-black hover:cursor-pointer py-3 rounded-lg font-semibold hover:bg-gray-200 transition"
@@ -20,6 +21,16 @@ export default function Login() {
           }
         >
           Login with GitHub
+        </button>
+        <button
+          className="w-full bg-blue-500 text-white py-3 hover:cursor-pointer rounded-lg font-semibold hover:bg-blue-600 transition"
+          onClick={() =>
+            signIn("uaepass", {
+              callbackUrl: "http://localhost:3001/dashboard",
+            })
+          }
+        >
+          Login with UAE Pass
         </button>
       </div>
     </div>
